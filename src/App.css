@@ -61,6 +61,18 @@ button{
     width: 400px;
   }
 }
+@media only screen and (max-width: 1500px) {
+  .app__container {
+    height: 500px;
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .app__container {
+    height: 500px;
+    width: 350px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .app__container {
     height: 500px;
