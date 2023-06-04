@@ -11,10 +11,10 @@ dispatch(setCheck(id))
     }
   return (
     <div className='todoIthem'>
-       <Checkbox checked={!done} color='primary' onChange={handleCheck} inputProps={{"aria-label": "secondary checkbox"}}
+       <Checkbox checked={done} color='primary' onChange={handleCheck} inputProps={{"aria-label": "secondary checkbox"}}
        />
         
-        <p className={!done  && "todoItem--done"}>{name}</p>
+        <p className={done  && "todoItem--done"}>{name}</p>
        
 
       

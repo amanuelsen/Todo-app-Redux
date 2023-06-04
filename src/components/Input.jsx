@@ -8,14 +8,18 @@ function Input() {
   const [input, setInput] = useState('');
 
   const addTodo = () => {
-    console.log(`adding ${input}`);
-    dispatch(
-      saveTodo({
-        item: input,
-        done: "false",
-        id: Date.now(),
-      })
-    );
+    if (input.trim() !== '') { 
+      dispatch(
+        saveTodo({
+          item: input,
+          done: false,
+          id: Date.now(),
+        })
+      );
+      setInput("")
+    } else {
+    alert('Input is empty');
+    }
   };
 
   return (
