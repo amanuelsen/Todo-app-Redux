@@ -2,26 +2,21 @@ import { useState } from 'react'
 import './App.css'
 import Input from './components/Input'
 import TodoIthem from './components/Todo'
+import { useSelector } from 'react-redux'
+import { SelecTodolist } from './features/todoslice'
 
-const todoList= [{
-  item:"spela",
-      done:"true",
-      id:12345
-},
-{
-  item:"spela3",
-      done:"false",
-      id:123456
-}]
 function App() {
+  const toDolist=useSelector(SelecTodolist)
+
   
    return( 
     <div className='App'>
       <div className='app__container'>
+        <h1>Todo App</h1>
 
       <div className='app__todoContainer'>
 {
-  todoList.map((item)=> ( 
+  toDolist.map((item)=> ( 
     <TodoIthem name={item.item} id={item.id} done={item.done}/>
   ))
 }
